@@ -90,6 +90,12 @@ def problem3():
         print("True")
     elif(userInput+2)%10 == 0:
         print("True")
+    elif(userInput-1)%10 == 0:
+        print("true")
+    elif(userInput-1)%10 == 0:
+        print("true")
+    elif(userInput%10 == 0):
+        print("true")
     else:
         print("False")
 
