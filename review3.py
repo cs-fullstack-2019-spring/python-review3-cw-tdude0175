@@ -1,7 +1,7 @@
 def main():
-    problem1()
+    # problem1()
     # problem2()
-    # problem3()
+    problem3()
     # problem4([10, 3, 5, 6])
 
 # Given a number n, return True if n is in the range 1..10, inclusive.
@@ -86,18 +86,28 @@ def problem2():
 
 def problem3():
     userInput = int(input("number within 2 of divsible by 10\n"))
-    if (userInput-2)%10 == 0:
-        print("True")
-    elif(userInput+2)%10 == 0:
-        print("True")
-    elif(userInput-1)%10 == 0:
-        print("true")
-    elif(userInput-1)%10 == 0:
-        print("true")
-    elif(userInput%10 == 0):
-        print("true")
-    else:
-        print("False")
+    for number in range(userInput-2,userInput+2):
+        if number%10 == 0:
+            result = True
+            break
+        else:
+            result = False
+    print(result)
+
+
+
+    # if (userInput-2)%10 == 0:
+    #     print("True")
+    # elif(userInput+2)%10 == 0:
+    #     print("True")
+    # elif(userInput-1)%10 == 0:
+    #     print("true")
+    # elif(userInput-1)%10 == 0:
+    #     print("true")
+    # elif(userInput%10 == 0):
+    #     print("true")
+    # else:
+    #     print("False")
 
 # Given an array length 1 or more of ints,
 # return the difference between the largest and smallest values in the array.
