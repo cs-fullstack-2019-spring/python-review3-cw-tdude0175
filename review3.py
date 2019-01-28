@@ -1,8 +1,8 @@
 def main():
-    # problem1()
+    problem1()
     # problem2()
     # problem3()
-    problem4([10, 3, 5, 6])
+    # problem4([10, 3, 5, 6])
 
 # Given a number n, return True if n is in the range 1..10, inclusive.
 # Unless outside_mode is True, in which case return True if the number is less or equal to 1,
@@ -36,13 +36,16 @@ def problem1():
         mode_flag = True
     elif mode_flag.lower() == "false":
         mode_flag = False
-    # number overrides flag, flag overrides false number
-    if result == True:
+    # flag tells it to test for inside or outside of range
+
+    if(result == True and mode_flag ==True):
         print(f"{number} is {result}")
-    elif result == False and mode_flag == False:
-        print(f"{number} is {result}")
-    elif result == False and mode_flag == True:
+    elif(result == True and mode_flag == False):
         print(f"{number} is {mode_flag}")
+    elif(result == False and mode_flag == False):
+        print(f"{number} is {True}")
+    elif(result == False and mode_flag == True):
+        print(f"{number} is {result}")
 
 # Create a function that has a loop that quits with the equal sign.
 # If the user doesn't enter the equal sign, ask them to input another string.
